@@ -1,18 +1,7 @@
-Open Data Services Sphinx Base
-==============================
+# Open Data Services JSON Schema Extension
 
-The base Sphinx setup (myst-parser + internationalisation + Open Data Services maintained extensions) for Open Data Services docs projects.
+An extension to JSON Schema that adds keywords related to codelists and deprecation.
 
-
-```{eval-rst}
-
-.. toctree::
-   :titlesonly:
-   :maxdepth: 2
-   :caption: Table of Contents
-
-   features
-   examples/index
-   kitchen-sink/index
-
+```{jsonschema} ../metaschema/2020-12/metaschema-patch.json
+:pointer:
 ```

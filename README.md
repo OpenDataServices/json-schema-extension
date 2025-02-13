@@ -1,110 +1,52 @@
-# Open Data Services Sphinx Base
+# Open Data Services JSON Schema Extension
 
-The base Sphinx setup (myst-parser + internationalisation + Open Data Services
-maintained extensions) for Open Data Services docs projects.
+An extension to JSON Schema that adds keywords related to codelists and deprecation.
 
-## Features
-
-* Markdown support (thanks to myst-parser)
-* Internationalisation
-* Wrapping text in tables, to avoid having horizontal scrollbars
-* Extra directives you can use, thanks to our extensions, see the docs of those for more information:
-  - https://sphinxcontrib-opendataservices.readthedocs.io/en/latest/
-  - https://sphinxcontrib-opendataservices-jsonschema.readthedocs.io/en/latest/use.html
+If you are viewing this on GitHub, open the full documentation for additional details.
 
 ## Building the documentation
 
-### Build the docs locally
+## Get started
+
+```{note}
+Building the documentation requires Python 3.9 or greater.
+```
   
-Assuming a unix based system:
+Create a virtual environment:
 
 ```
-# Make sure you have python3 venv, e.g. for Ubuntu
-# If you're not sure, try creating a venv, and see if it errors
 sudo apt-get install python3-venv
-
-# Install submodules
-git submodule init
-git submodule update
-
-# Create a venv
-python3 -m venv .ve    
-
-# Enter the venv, needs to be run for every new shell
+python3 -m venv .venv
 source .ve/bin/activate
+```
 
-# Install requirements
-pip install --upgrade pip setuptools
+Install requirements:
+
+```
 pip install -r requirements.txt
+pip install -r requirements_dev.txt
+```
 
-# Build the docs
+## Build the documentation
+
+Sphinx, which builds the documentation, doesn’t watch directories for changes. To regenerate the documentation and refresh the browser whenever changes are made, run:
+
+```
+sphinx-autobuild docs docs/_build/dirhtml
+```
+
+Otherwise, build the docs into `docs/_build/dirhtml`:
+
+```
 cd docs
 make dirhtml
 ```
 
-Built docs are in `docs/_build/dirhtml`.
+View the documentation by running a local web server:
 
-
-Viewing the docs:
 ```
 cd _build/dirhtml
 python -m http.server
 ```
 
-Then go to http://localhost:8000/ in a browser.
-
-
-### Building on readthedocs
-
-Initial setup:
-
-* Select your repo at: https://readthedocs.org/dashboard/import/
-* Tick: "Edit advanced project options:"
-* Click "Next" button
-* Documentation type: "Sphinx HtmlDir"
-* Click "Finish" button
-* Click "Admin" button, then "Advanced Settings" in the left hand nav
-* Requirements file: `requirements.txt`
-* Python interpreter: "CPython 3.x"
-* Click "Submit" button
-
-
-
-### Translations
-
-Translations are generally done using this transifex project.
-Create one at https://www.transifex.com/OpenDataServices/add/ :
-* Select "Public project" and "File-based Project".
-* Add the url of the project to this README, e.g. https://www.transifex.com/OpenDataServices/sphinx-base/dashboard/
-
-How to push new text up to Transifex:
-
-First, do a local build, then:
-
-```
-cd docs
-make gettext
-sphinx-intl update-txconfig-resources --transifex-project-name <project-name>
-tx push -s
-```
-
-When the translations are filled in transifex you need to run:
-
-```
-tx pull -a -f
-```
-
-These should then be commited and then pushed to GitHub (so that actual
-deployed translations are always version controlled).
-
-Running the build in another language:
-
-```
-make -e SPHINXOPTS="-D language='<language code>'" html
-```
-
-If translations are added locally, these can also be pushed up to Transifex:
-
-```
-tx push -t --skip
-```
+Go to http://localhost:8000/ in a browser.
