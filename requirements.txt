@@ -38,7 +38,9 @@ jinja2==3.1.5
 jscc==0.3.0
     # via sphinxcontrib-opendataservices-jsonschema
 json-merge-patch==0.2
-    # via jscc
+    # via
+    #   -r requirements.in
+    #   jscc
 jsonpointer==3.0.0
     # via sphinxcontrib-opendataservices-jsonschema
 jsonref==1.1.0
