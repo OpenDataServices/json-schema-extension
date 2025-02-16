@@ -1,0 +1,271 @@
+{
+  "id": "https://json-schema-extension.opendataservices.coop/schema/draft-04/metaschema.json",
+  "$schema": "https://json-schema-extension.opendataservices.coop/schema/draft-04/metaschema.json",
+  "description": "Core schema meta-schema",
+  "definitions": {
+    "schemaArray": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "$ref": "#"
+      }
+    },
+    "positiveInteger": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "positiveIntegerDefault0": {
+      "allOf": [
+        {
+          "$ref": "#/definitions/positiveInteger"
+        },
+        {
+          "default": 0
+        }
+      ]
+    },
+    "simpleTypes": {
+      "enum": [
+        "array",
+        "boolean",
+        "integer",
+        "null",
+        "number",
+        "object",
+        "string"
+      ]
+    },
+    "stringArray": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "minItems": 1,
+      "uniqueItems": true
+    },
+    "deprecatedDetails": {
+      "title": "Deprecated details",
+      "description": "Information about the deprecation of the field.",
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "version",
+        "description"
+      ],
+      "properties": {
+        "version": {
+          "title": "Version",
+          "description": "The version in which the field was first deprecated.",
+          "type": "string"
+        },
+        "description": {
+          "title": "Description",
+          "description": "A description of the reason for the field's deprecation and information about its replacement, if any.",
+          "type": "string"
+        }
+      }
+    }
+  },
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "string"
+    },
+    "$schema": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    },
+    "default": {},
+    "multipleOf": {
+      "type": "number",
+      "minimum": 0,
+      "exclusiveMinimum": true
+    },
+    "maximum": {
+      "type": "number"
+    },
+    "exclusiveMaximum": {
+      "type": "boolean",
+      "default": false
+    },
+    "minimum": {
+      "type": "number"
+    },
+    "exclusiveMinimum": {
+      "type": "boolean",
+      "default": false
+    },
+    "maxLength": {
+      "$ref": "#/definitions/positiveInteger"
+    },
+    "minLength": {
+      "$ref": "#/definitions/positiveIntegerDefault0"
+    },
+    "pattern": {
+      "type": "string",
+      "format": "regex"
+    },
+    "additionalItems": {
+      "anyOf": [
+        {
+          "type": "boolean"
+        },
+        {
+          "$ref": "#"
+        }
+      ],
+      "default": {}
+    },
+    "items": {
+      "anyOf": [
+        {
+          "$ref": "#"
+        },
+        {
+          "$ref": "#/definitions/schemaArray"
+        }
+      ],
+      "default": {}
+    },
+    "maxItems": {
+      "$ref": "#/definitions/positiveInteger"
+    },
+    "minItems": {
+      "$ref": "#/definitions/positiveIntegerDefault0"
+    },
+    "uniqueItems": {
+      "type": "boolean",
+      "default": false
+    },
+    "maxProperties": {
+      "$ref": "#/definitions/positiveInteger"
+    },
+    "minProperties": {
+      "$ref": "#/definitions/positiveIntegerDefault0"
+    },
+    "required": {
+      "$ref": "#/definitions/stringArray"
+    },
+    "additionalProperties": {
+      "anyOf": [
+        {
+          "type": "boolean"
+        },
+        {
+          "$ref": "#"
+        }
+      ],
+      "default": {}
+    },
+    "definitions": {
+      "type": "object",
+      "additionalProperties": {
+        "$ref": "#"
+      },
+      "default": {}
+    },
+    "properties": {
+      "type": "object",
+      "additionalProperties": {
+        "$ref": "#"
+      },
+      "default": {}
+    },
+    "patternProperties": {
+      "type": "object",
+      "additionalProperties": {
+        "$ref": "#"
+      },
+      "default": {}
+    },
+    "dependencies": {
+      "type": "object",
+      "additionalProperties": {
+        "anyOf": [
+          {
+            "$ref": "#"
+          },
+          {
+            "$ref": "#/definitions/stringArray"
+          }
+        ]
+      }
+    },
+    "enum": {
+      "type": "array",
+      "minItems": 1,
+      "uniqueItems": true
+    },
+    "type": {
+      "anyOf": [
+        {
+          "$ref": "#/definitions/simpleTypes"
+        },
+        {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/simpleTypes"
+          },
+          "minItems": 1,
+          "uniqueItems": true
+        }
+      ]
+    },
+    "format": {
+      "type": "string"
+    },
+    "allOf": {
+      "$ref": "#/definitions/schemaArray"
+    },
+    "anyOf": {
+      "$ref": "#/definitions/schemaArray"
+    },
+    "oneOf": {
+      "$ref": "#/definitions/schemaArray"
+    },
+    "not": {
+      "$ref": "#"
+    },
+    "deprecatedDetails": {
+      "$ref": "#/definitions/deprecatedDetails"
+    },
+    "codelist": {
+      "title": "Codelist",
+      "description": "The CSV file that defines the codes in the codelist that the field refers to.",
+      "type": "string"
+    },
+    "openCodelist": {
+      "title": "Open codelist",
+      "description": "Whether the codelist that the field refers to is an open codelist.",
+      "type": "boolean",
+      "default": false,
+      "deprecated": true,
+      "deprecatedDetails": {
+        "version": "1.0",
+        "description": "This keyword is deprecated favour of using `enum` to indicate a closed codelist. An field refers to an open codelist when `codelist` is set without the presence of `enum`."
+      }
+    },
+    "deprecated": {
+      "$ref": "#/definitions/deprecatedDetails",
+      "deprecatedDetails": {
+        "version": "1.0",
+        "description": "This field is deprecated in favour of `deprecatedDetails` for forward compatibility with later versions of JSON Schema, which implement a boolean `deprecated` keyword."
+      }
+    }
+  },
+  "dependencies": {
+    "exclusiveMaximum": [
+      "maximum"
+    ],
+    "exclusiveMinimum": [
+      "minimum"
+    ]
+  },
+  "default": {},
+  "additionalProperties": false
+}
