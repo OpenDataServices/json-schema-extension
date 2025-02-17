@@ -1,0 +1,3 @@
+Files named `metaschema-patch.json` in the `schema` directory and its subdirectories are modified from the [Open Contracting Data Standard metaschema patch](https://github.com/open-contracting/standard/blob/1.2-dev/schema/metaschema/meta-schema-patch.json).
+
+`manage.py` is modified from the [Open Contracting Data Standard's `manage.py`](https://github.com/open-contracting/standard/blob/1.2-dev/manage.py).
