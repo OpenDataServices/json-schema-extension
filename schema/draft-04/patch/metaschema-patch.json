@@ -2,6 +2,11 @@
     "id": "http://json-schema-extension.opendataservices.coop/1__0__0/draft-04/metaschema.json",
     "$schema": "http://json-schema-extension.opendataservices.coop/1__0__0/draft-04/metaschema.json",
     "properties": {
+      "$ref": {
+        "title": "URI Reference",
+        "description": "A reference to a statically identified schema.  This keyword must be set to an absolute URI or a relative reference as defined by [RFC 3986](https://www.rfc-editor.org/info/rfc3986), where its fragment (if any) can consist of a JSON Pointer as defined by [RFC 6901](https://datatracker.ietf.org/doc/html/rfc6901).",
+        "type": "string"
+      },      
       "deprecatedDetails": {
         "$ref": "#/definitions/deprecatedDetails"
       },
