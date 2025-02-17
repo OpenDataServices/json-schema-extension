@@ -1,6 +1,12 @@
 # Open Data Services JSON Schema Extension
 
-An extension to [JSON Schema](https://json-schema.org/) that adds keywords related to deprecation and codelists. It consists of JSON Schema metaschema patches and extended metaschemas for the following versions of JSON Schema:
+An extension to [JSON Schema](https://json-schema.org/) to:
+
+* Add keywords related to codelists
+* Add keywords related to deprecation
+* Disallow keywords not documented in either JSON Schema or the extension.
+
+The extension consists of JSON Schema metaschema patches and extended metaschemas for the following versions of JSON Schema:
 
 ```{toctree}
 2020-12
