@@ -1,6 +1,6 @@
 {
-    "$id": "https://json-schema-extension.opendataservices.coop/schema/2020-12/metaschema.json",
-    "$schema": "https://json-schema-extension.opendataservices.coop/schema/2020-12/metaschema.json",
+    "$id": "http://json-schema-extension.opendataservices.coop/1__0__0/2020-12/metaschema.json",
+    "$schema": "http://json-schema-extension.opendataservices.coop/1__0__0/2020-12/metaschema.json",
     "properties": {
       "deprecatedDetails": {
         "title": "Deprecated details",
@@ -8,11 +8,11 @@
         "type": "object",
         "additionalProperties": false,
         "required": [
-          "version",
+          "deprecatedVersion",
           "description"
         ],
         "properties": {
-          "version": {
+          "deprecatedVersion": {
             "title": "Version",
             "description": "The version in which the field was first deprecated.",
             "type": "string"
@@ -36,7 +36,7 @@
         "default": false,
         "deprecated": true,
         "deprecatedDetails": {
-          "version": "1.0",
+          "deprecatedVersion": "1.0",
           "description": "This keyword is deprecated favour of using `enum` to indicate a closed codelist. An field refers to an open codelist when `codelist` is set without the presence of `enum`."
         }
       }
