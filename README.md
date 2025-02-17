@@ -2,11 +2,11 @@
 
 An extension to JSON Schema that adds keywords related to codelists and deprecation.
 
-If you are viewing this on GitHub, open the full documentation for additional details.
+If you are viewing this on GitHub, open the [full documentation](https://json-schema-extension.opendataservices.coop) for additional details.
 
-## Building the documentation
+## Maintenance
 
-## Get started
+## Set up your development environment
 
 ```{note}
 Building the documentation requires Python 3.9 or greater.
@@ -25,6 +25,14 @@ Install requirements:
 ```
 pip install -r requirements.txt
 pip install -r requirements_dev.txt
+```
+
+## Update the metaschemas
+
+If you edited a metaschema patch, run the following command to update the metaschemas:
+
+```
+python manage.py pre-commit
 ```
 
 ## Build the documentation
