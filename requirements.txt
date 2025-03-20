@@ -102,7 +102,7 @@ sphinxcontrib-htmlhelp==2.1.0
     # via sphinx
 sphinxcontrib-jsmath==1.0.1
     # via sphinx
-sphinxcontrib-opendataservices-jsonschema==0.7.1
+sphinxcontrib-opendataservices-jsonschema @ git+https://github.com/OpenDataServices/sphinxcontrib-opendataservices-jsonschema.git@ce81aa6b06f212fb6d4578eec6f275c308c0da3e
     # via -r requirements.in
 sphinxcontrib-qthelp==2.0.0
     # via sphinx
