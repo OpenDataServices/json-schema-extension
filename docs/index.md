@@ -9,6 +9,7 @@ An extension to [JSON Schema](https://json-schema.org/) to:
 The extension consists of JSON Schema metaschema patches and extended metaschemas for the following versions of JSON Schema:
 
 ```{toctree}
+:maxdepth: 1
 2020-12
 draft-04
 ```
