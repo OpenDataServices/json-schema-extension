@@ -24,6 +24,7 @@ docutils==0.21.2
     # via
     #   myst-parser
     #   sphinx
+    #   sphinxcontrib-opendataservices
     #   sphinxcontrib-opendataservices-jsonschema
 furo==2024.8.6
     # via odsc-default-sphinx-theme
@@ -42,7 +43,9 @@ json-merge-patch==0.2
     #   -r requirements.in
     #   jscc
 jsonpointer==3.0.0
-    # via sphinxcontrib-opendataservices-jsonschema
+    # via
+    #   sphinxcontrib-opendataservices
+    #   sphinxcontrib-opendataservices-jsonschema
 jsonref==1.1.0
     # via
     #   jscc
@@ -60,6 +63,7 @@ mdurl==0.1.2
 myst-parser==4.0.1
     # via
     #   -r requirements.in
+    #   sphinxcontrib-opendataservices
     #   sphinxcontrib-opendataservices-jsonschema
 odsc-default-sphinx-theme==0.0.1
     # via -r requirements.in
@@ -90,6 +94,7 @@ sphinx==8.1.3
     #   myst-parser
     #   sphinx-basic-ng
     #   sphinx-intl
+    #   sphinxcontrib-opendataservices
 sphinx-basic-ng==1.0.0b2
     # via furo
 sphinx-intl==2.3.1
@@ -102,8 +107,12 @@ sphinxcontrib-htmlhelp==2.1.0
     # via sphinx
 sphinxcontrib-jsmath==1.0.1
     # via sphinx
-sphinxcontrib-opendataservices-jsonschema @ git+https://github.com/OpenDataServices/sphinxcontrib-opendataservices-jsonschema.git@ce81aa6b06f212fb6d4578eec6f275c308c0da3e
+sphinxcontrib-opendataservices==0.5.0
     # via -r requirements.in
+sphinxcontrib-opendataservices-jsonschema @ git+https://github.com/OpenDataServices/sphinxcontrib-opendataservices-jsonschema.git@ce81aa6b06f212fb6d4578eec6f275c308c0da3e
+    # via
+    #   -r requirements.in
+    #   sphinxcontrib-opendataservices
 sphinxcontrib-qthelp==2.0.0
     # via sphinx
 sphinxcontrib-serializinghtml==2.0.0

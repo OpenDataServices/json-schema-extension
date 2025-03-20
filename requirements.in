@@ -3,4 +3,5 @@ odsc-default-sphinx-theme
 myst-parser
 sphinx
 sphinx-intl
+sphinxcontrib-opendataservices
 git+https://github.com/OpenDataServices/sphinxcontrib-opendataservices-jsonschema.git@ce81aa6b06f212fb6d4578eec6f275c308c0da3e#egg=sphinxcontrib-opendataservices-jsonschema

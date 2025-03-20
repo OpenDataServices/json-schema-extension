@@ -14,5 +14,15 @@ The patch adds the [`$ref`](https://json-schema.org/understanding-json-schema/st
 
 ```{jsonschema} ../schema/draft-04/patch/metaschema-patch.json
 :pointer:
-:nocrossref:
+:collapse: deprecatedDetails,deprecated
+```
+
+## deprecatedDetails
+
+```{jsoninclude-quote} ../schema/draft-04/patch/metaschema-patch.json
+:jsonpointer: /definitions/deprecatedDetails/description
+```
+
+```{jsonschema} ../schema/draft-04/patch/metaschema-patch.json
+:pointer: /definitions/deprecatedDetails
 ```
