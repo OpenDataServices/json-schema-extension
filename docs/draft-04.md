@@ -5,7 +5,7 @@ The [draft 4 metaschema patch](../schema/draft-04/patch/metaschema-patch.json) s
 ```{tip}
 To reference the extended metaschema, use its canonical URI:
 
-[`http://json-schema-extension.opendataservices.coop/1__0__0/draft-04/metaschema.json`](http://json-schema-extension.opendataservices.coop/1__0__0/draft-04/metaschema.json)
+[`http://json-schema-extension.readthedocs.io/1__0__0/draft-04/metaschema.json`](http://json-schema-extension.readthedocs.io/1__0__0/draft-04/metaschema.json)
 ```
 
 ```{note}

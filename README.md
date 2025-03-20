@@ -2,7 +2,7 @@
 
 An extension to JSON Schema that adds keywords related to codelists and deprecation.
 
-If you are viewing this on GitHub, open the [full documentation](https://json-schema-extension.opendataservices.coop) for additional details.
+If you are viewing this on GitHub, open the [full documentation](https://json-schema-extension.readthedocs.io) for additional details.
 
 ## Maintenance
 
