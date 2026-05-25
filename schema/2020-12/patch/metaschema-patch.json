@@ -1,6 +1,6 @@
 {
-    "$id": "http://json-schema-extension.readthedocs.io/1__0__0/2020-12/metaschema.json",
-    "$schema": "http://json-schema-extension.readthedocs.io/1__0__0/2020-12/metaschema.json",
+    "$id": "http://json-schema-extension.readthedocs.io/1__1__0/2020-12/metaschema.json",
+    "$schema": "http://json-schema-extension.readthedocs.io/1__1__0/2020-12/metaschema.json",
     "properties": {
       "deprecatedDetails": {
         "title": "Deprecated details",
@@ -39,6 +39,12 @@
           "deprecatedVersion": "1.0",
           "description": "This keyword is deprecated favour of using `enum` to indicate a closed codelist. An field refers to an open codelist when `codelist` is set without the presence of `enum`."
         }
+      },
+      "x-references": {
+        "title": "References",
+        "description": "The JSON Pointer of the property that this field references.",
+        "type": "string",
+        "format": "uri-reference"
       }
     },
     "additionalProperties": false
