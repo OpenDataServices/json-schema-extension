@@ -1,5 +1,28 @@
 {
     "$id": "http://json-schema-extension.readthedocs.io/1__1__0/2020-12/metaschema.json",
+    "allOf": [
+        {
+          "$ref": "https://json-schema.org/draft/2020-12/meta/core"
+        },
+        {
+          "$ref": "https://json-schema.org/draft/2020-12/meta/applicator"
+        },
+        {
+          "$ref": "https://json-schema.org/draft/2020-12/meta/unevaluated"
+        },
+        {
+          "$ref": "https://json-schema.org/draft/2020-12/meta/validation"
+        },
+        {
+          "$ref": "https://json-schema.org/draft/2020-12/meta/meta-data"
+        },
+        {
+          "$ref": "https://json-schema.org/draft/2020-12/meta/format-annotation"
+        },
+        {
+          "$ref": "https://json-schema.org/draft/2020-12/meta/content"
+        }
+      ],
     "properties": {
       "deprecatedDetails": {
         "title": "Deprecated details",
