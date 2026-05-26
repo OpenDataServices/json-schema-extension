@@ -1,6 +1,5 @@
 {
     "$id": "http://json-schema-extension.readthedocs.io/1__1__0/2020-12/metaschema.json",
-    "$schema": "http://json-schema-extension.readthedocs.io/1__1__0/2020-12/metaschema.json",
     "properties": {
       "deprecatedDetails": {
         "title": "Deprecated details",

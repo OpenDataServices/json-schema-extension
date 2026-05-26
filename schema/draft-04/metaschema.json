@@ -1,6 +1,6 @@
 {
   "id": "http://json-schema-extension.readthedocs.io/1__0__0/draft-04/metaschema.json",
-  "$schema": "http://json-schema-extension.readthedocs.io/1__0__0/draft-04/metaschema.json",
+  "$schema": "http://json-schema.org/draft-04/schema#",
   "description": "Core schema meta-schema",
   "definitions": {
     "schemaArray": {
