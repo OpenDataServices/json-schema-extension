@@ -59,7 +59,7 @@
             "$dynamicRef": "#meta"
           },
           {
-            "$ref": "meta/validation#/$defs/stringArray"
+            "$ref": "https://json-schema.org/draft/2020-12/meta/validation#/$defs/stringArray"
           }
         ]
       },
@@ -68,12 +68,12 @@
     },
     "$recursiveAnchor": {
       "$comment": "\"$recursiveAnchor\" has been replaced by \"$dynamicAnchor\".",
-      "$ref": "meta/core#/$defs/anchorString",
+      "$ref": "https://json-schema.org/draft/2020-12/meta/core#/$defs/anchorString",
       "deprecated": true
     },
     "$recursiveRef": {
       "$comment": "\"$recursiveRef\" has been replaced by \"$dynamicRef\".",
-      "$ref": "meta/core#/$defs/uriReferenceString",
+      "$ref": "https://json-schema.org/draft/2020-12/meta/core#/$defs/uriReferenceString",
       "deprecated": true
     },
     "deprecatedDetails": {
