@@ -165,5 +165,5 @@
       "type": "string"
     }
   },
-  "additionalProperties": false
+  "unevaluatedProperties": false
 }
