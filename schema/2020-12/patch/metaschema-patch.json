@@ -1,5 +1,5 @@
 {
-    "$id": "http://json-schema-extension.readthedocs.io/1__1__0/2020-12/metaschema.json",
+    "$id": "http://json-schema-extension.readthedocs.io/2__0__0/2020-12/metaschema.json",
     "allOf": [
         {
           "$ref": "https://json-schema.org/draft/2020-12/meta/core"
@@ -64,9 +64,53 @@
       },
       "x-references": {
         "title": "References",
-        "description": "The JSON Pointer of the property that this field references.",
+        "description": "Marks a property or $defs entry as a foreign-key reference to an entity elsewhere in the schema.",
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "definition",
+          "collection",
+          "property"
+        ],
+        "properties": {
+          "definition": {
+            "title": "Definition",
+            "description": "The JSON Pointer to the $defs entry for the referenced entity.",
+            "type": "string",
+            "format": "json-pointer"
+          },
+          "collection": {
+            "title": "Collection",
+            "description": "The JSON Pointer to the property holding the array of instances of the referenced entity.",
+            "type": "string",
+            "format": "json-pointer"
+          },
+          "property": {
+            "title": "Property",
+            "description": "The name of the property, on the referenced entity, that this reference's value is matched against.",
+            "type": "string"
+          },
+          "from": {
+            "title": "From",
+            "description": "The name of the property, on the object where x-references is declared, whose value provides the reference. Used when x-references is declared on a $defs entry (e.g. OrganisationReference) rather than directly on the referencing property.",
+            "type": "string"
+          }
+        }
+      },
+      "x-logical-type": {
+        "title": "Logical type",
+        "description": "Marks how a $defs entry or property is treated when the schema's logical data model is extracted.",
         "type": "string",
-        "format": "uri-reference"
+        "enum": [
+          "entity",
+          "attribute",
+          "exclude"
+        ]
+      },
+      "x-relationship-label": {
+        "title": "Relationship label",
+        "description": "A human-friendly label describing the relationship represented by a property, used when documenting or diagramming the data model.",
+        "type": "string"
       }
     },
     "additionalProperties": false

@@ -4,6 +4,7 @@ An extension to [JSON Schema](https://json-schema.org/) to:
 
 * Add keywords related to codelists
 * Add keywords related to deprecation
+* Add keywords related to extracting and documenting a relational data model from a JSON Schema
 * Disallow keywords not documented in either JSON Schema or the extension.
 
 The extension consists of JSON Schema metaschema patches and extended metaschemas for the following versions of JSON Schema:
